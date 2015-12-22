@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <SharethroughSDK/SharethroughSDK.h>
+#import <SharethroughSDK+DFP/SharethroughSDK+DFP.h>
 
 @interface AdDelegate : NSObject <STRAdViewDelegate>
 
@@ -48,16 +48,42 @@
 
 @end
 
-@interface ViewController ()
+@interface ViewController () <STRAdViewDelegate>
 
+- (IBAction)popViewController:(id)sender;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+#if DEBUG
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
+#endif
+    
     // Do any additional setup after loading the view, typically from a nib.
-    [[SharethroughSDK sharedInstance] prefetchAdForPlacementKey:@"e7244b42" delegate:[AdDelegate sharedInstance]];
+    [[SharethroughSDKDFP sharedInstance] prefetchAdForPlacementKey:@"e7244b42" delegate:self];
+}
+
+-(void)orientationDidChange:(NSNotification *)notification{
+    NSLog(@"ORIENTATION CHANGED");
+}
+
+- (void)didPrefetchAdvertisement:(STRAdvertisement *)strAd {
+    NSLog(@"didPrefetch");
+}
+
+- (void)didFailToPrefetchForPlacementKey:(NSString *)placementKey {
+    NSLog(@"failed to prefetch");
+}
+
+- (void)adView:(id<STRAdView>)adView didFetchAdForPlacementKey:(NSString *)placementKey atIndex:(NSInteger)adIndex {
+    NSLog(@"didFetch");
+}
+
+- (void)adView:(id<STRAdView>)adView didFailToFetchAdForPlacementKey:(NSString *)placementKey atIndex:(NSInteger)adIndex{
+    NSLog(@"didFail");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,4 +91,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)popViewController:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

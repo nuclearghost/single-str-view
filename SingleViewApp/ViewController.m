@@ -76,7 +76,6 @@ static NSString *kPlacementKey = @"e7244b42";
 
 - (void)didPrefetchAdvertisement:(STRAdvertisement *)strAd {
     NSLog(@"didPrefetch");
-    [self assignAllAds];
 }
 
 - (void)didFailToPrefetchForPlacementKey:(NSString *)placementKey {
@@ -96,17 +95,26 @@ static NSString *kPlacementKey = @"e7244b42";
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)popViewController:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 - (IBAction)fetchAds:(id)sender {
     [[SharethroughSDK sharedInstance] prefetchAdForPlacementKey:kPlacementKey delegate:self];
 }
 
+- (IBAction)AssignAllAds:(id)sender {
+    [self assignAllAds];
+}
+
+- (IBAction)clearAssignedAds:(id)sender {
+    [self clearAds];
+}
+
+- (IBAction)logAdCounts:(id)sender {
+    [self numberOfAdsAvialable];
+}
+
 - (NSInteger)numberOfAdsAvialable {
     NSInteger nAds = [[SharethroughSDK sharedInstance] totalNumberOfAdsAvailableForPlacement:kPlacementKey];
-    NSLog(@"There are %ld ads available", (long)nAds);
+    NSInteger nUnassignedAds = [[SharethroughSDK sharedInstance] unassignedNumberOfAdsAvailableForPlacement:kPlacementKey];
+    NSLog(@"There are %ld total ads assigned and unassigned. %ld unassigned", (long)nAds, (long)nUnassignedAds);
     return nAds;
 }
 
@@ -117,7 +125,6 @@ static NSString *kPlacementKey = @"e7244b42";
     }
     NSInteger nUnassignedAds = [[SharethroughSDK sharedInstance] unassignedNumberOfAdsAvailableForPlacement:kPlacementKey];
     NSLog(@"Assigned %ld ads. %ld unassigned", (long)nAds, (long)nUnassignedAds);
-    [self clearAds];
 }
 
 - (void)clearAds {

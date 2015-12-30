@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cec-CO-hbS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -50,26 +50,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JW-es-8ZZ">
-                                <rect key="frame" x="285" y="285" width="30" height="30"/>
-                                <state key="normal" title="Pop"/>
+                                <rect key="frame" x="262" y="58" width="76" height="30"/>
+                                <state key="normal" title="Assign Ads"/>
                                 <connections>
-                                    <action selector="popViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbn-z0-ztS"/>
+                                    <action selector="AssignAllAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJ0-on-23w"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjA-hm-aEr">
-                                <rect key="frame" x="257" y="323" width="87" height="30"/>
+                                <rect key="frame" x="257" y="20" width="87" height="30"/>
                                 <state key="normal" title="Request Ads"/>
                                 <connections>
                                     <action selector="fetchAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6C-jW-sAf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag0-FK-IId">
+                                <rect key="frame" x="234" y="96" width="133" height="30"/>
+                                <state key="normal" title="Clear Assigned Ads"/>
+                                <connections>
+                                    <action selector="clearAssignedAds:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qbh-GN-Haw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVS-sr-U9E">
+                                <rect key="frame" x="250" y="134" width="101" height="30"/>
+                                <state key="normal" title="Log Ad Counts"/>
+                                <connections>
+                                    <action selector="logAdCounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyn-Q6-OEv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5JW-es-8ZZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3TZ-r2-8Yq"/>
-                            <constraint firstItem="5JW-es-8ZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WVa-ev-63n"/>
-                            <constraint firstItem="YjA-hm-aEr" firstAttribute="top" secondItem="5JW-es-8ZZ" secondAttribute="bottom" constant="8" id="f2F-PG-A64"/>
-                            <constraint firstItem="YjA-hm-aEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l8P-ox-Nbj"/>
+                            <constraint firstItem="YjA-hm-aEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1qi-oD-UBv"/>
+                            <constraint firstItem="YjA-hm-aEr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3Ze-Cl-QSg"/>
+                            <constraint firstItem="ag0-FK-IId" firstAttribute="top" secondItem="5JW-es-8ZZ" secondAttribute="bottom" constant="8" id="FHZ-l7-k0b"/>
+                            <constraint firstItem="ag0-FK-IId" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sx1-Ud-QNq"/>
+                            <constraint firstItem="rVS-sr-U9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VnJ-Ot-X1d"/>
+                            <constraint firstItem="5JW-es-8ZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m2H-nI-hEf"/>
+                            <constraint firstItem="5JW-es-8ZZ" firstAttribute="top" secondItem="YjA-hm-aEr" secondAttribute="bottom" constant="8" id="mEu-Aa-re5"/>
+                            <constraint firstItem="rVS-sr-U9E" firstAttribute="top" secondItem="ag0-FK-IId" secondAttribute="bottom" constant="8" id="zKR-da-N8F"/>
                         </constraints>
                     </view>
                 </viewController>

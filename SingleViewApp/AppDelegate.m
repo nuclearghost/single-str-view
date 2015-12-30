@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "STRDelegate.h"
+#import <SharethroughSDK+DFP/SharethroughSDK.h>
+
+static NSString *kPlacementKey = @"e7244b42";
 
 @interface AppDelegate ()
 
@@ -16,6 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[SharethroughSDK sharedInstance] prefetchAdForPlacementKey:kPlacementKey delegate:[STRDelegate sharedInstance]];
     // Override point for customization after application launch.
     return YES;
 }

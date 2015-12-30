@@ -20,6 +20,7 @@
 		511284171C29B707006F704A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284161C29B707006F704A /* AudioToolbox.framework */; };
 		511284191C29B70C006F704A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284181C29B70C006F704A /* CoreMedia.framework */; };
 		B2D6AE8B1C345DC10042E2DD /* SharethroughSDK+DFP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D6AE8A1C345DC10042E2DD /* SharethroughSDK+DFP.framework */; };
+		B2D6AE8E1C3461190042E2DD /* STRDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D6AE8D1C3461190042E2DD /* STRDelegate.m */; };
 		B2F1E7251C28B083001101F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1E7241C28B083001101F6 /* main.m */; };
 		B2F1E7281C28B083001101F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1E7271C28B083001101F6 /* AppDelegate.m */; };
 		B2F1E72B1C28B083001101F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1E72A1C28B083001101F6 /* ViewController.m */; };
@@ -48,6 +49,8 @@
 		511284161C29B707006F704A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		511284181C29B70C006F704A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B2D6AE8A1C345DC10042E2DD /* SharethroughSDK+DFP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "SharethroughSDK+DFP.framework"; sourceTree = "<group>"; };
+		B2D6AE8C1C3461190042E2DD /* STRDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRDelegate.h; sourceTree = "<group>"; };
+		B2D6AE8D1C3461190042E2DD /* STRDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRDelegate.m; sourceTree = "<group>"; };
 		B2F1E7201C28B083001101F6 /* SingleViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F1E7241C28B083001101F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2F1E7261C28B083001101F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				B2F1E7311C28B083001101F6 /* LaunchScreen.storyboard */,
 				B2F1E7341C28B083001101F6 /* Info.plist */,
 				B2F1E7231C28B083001101F6 /* Supporting Files */,
+				B2D6AE8C1C3461190042E2DD /* STRDelegate.h */,
+				B2D6AE8D1C3461190042E2DD /* STRDelegate.m */,
 			);
 			path = SingleViewApp;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F1E72B1C28B083001101F6 /* ViewController.m in Sources */,
+				B2D6AE8E1C3461190042E2DD /* STRDelegate.m in Sources */,
 				B2F1E7281C28B083001101F6 /* AppDelegate.m in Sources */,
 				B2F1E7251C28B083001101F6 /* main.m in Sources */,
 				511284011C29AF54006F704A /* InitialViewController.m in Sources */,

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		511284011C29AF54006F704A /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511284001C29AF54006F704A /* InitialViewController.m */; };
-		511284031C29B450006F704A /* SharethroughSDK+DFP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284021C29B450006F704A /* SharethroughSDK+DFP.framework */; };
 		511284051C29B64E006F704A /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284041C29B64E006F704A /* GoogleMobileAds.framework */; };
 		511284081C29B6CE006F704A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284061C29B6CE006F704A /* EventKit.framework */; };
 		511284091C29B6CE006F704A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284071C29B6CE006F704A /* EventKitUI.framework */; };
@@ -20,6 +19,7 @@
 		511284151C29B6FE006F704A /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284131C29B6FE006F704A /* AVKit.framework */; };
 		511284171C29B707006F704A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284161C29B707006F704A /* AudioToolbox.framework */; };
 		511284191C29B70C006F704A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511284181C29B70C006F704A /* CoreMedia.framework */; };
+		B2D6AE891C3444600042E2DD /* SharethroughSDK+DFP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D6AE881C3444600042E2DD /* SharethroughSDK+DFP.framework */; };
 		B2F1E7251C28B083001101F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1E7241C28B083001101F6 /* main.m */; };
 		B2F1E7281C28B083001101F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1E7271C28B083001101F6 /* AppDelegate.m */; };
 		B2F1E72B1C28B083001101F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F1E72A1C28B083001101F6 /* ViewController.m */; };
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		511283FF1C29AF54006F704A /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialViewController.h; sourceTree = "<group>"; };
 		511284001C29AF54006F704A /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialViewController.m; sourceTree = "<group>"; };
-		511284021C29B450006F704A /* SharethroughSDK+DFP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "SharethroughSDK+DFP.framework"; sourceTree = "<group>"; };
 		511284041C29B64E006F704A /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		511284061C29B6CE006F704A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		511284071C29B6CE006F704A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
@@ -48,6 +47,7 @@
 		511284131C29B6FE006F704A /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		511284161C29B707006F704A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		511284181C29B70C006F704A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B2D6AE881C3444600042E2DD /* SharethroughSDK+DFP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "SharethroughSDK+DFP.framework"; sourceTree = "<group>"; };
 		B2F1E7201C28B083001101F6 /* SingleViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2F1E7241C28B083001101F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B2F1E7261C28B083001101F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,12 +80,12 @@
 				5112840B1C29B6DA006F704A /* SystemConfiguration.framework in Frameworks */,
 				511284081C29B6CE006F704A /* EventKit.framework in Frameworks */,
 				511284091C29B6CE006F704A /* EventKitUI.framework in Frameworks */,
-				511284031C29B450006F704A /* SharethroughSDK+DFP.framework in Frameworks */,
 				B2F1E7471C28B2D0001101F6 /* MediaPlayer.framework in Frameworks */,
 				B2F1E7451C28B2C8001101F6 /* AdSupport.framework in Frameworks */,
 				B2F1E7431C28B2C0001101F6 /* CoreGraphics.framework in Frameworks */,
 				B2F1E7411C28B2BB001101F6 /* UIKit.framework in Frameworks */,
 				511284051C29B64E006F704A /* GoogleMobileAds.framework in Frameworks */,
+				B2D6AE891C3444600042E2DD /* SharethroughSDK+DFP.framework in Frameworks */,
 				B2F1E73F1C28B2B4001101F6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +96,7 @@
 		B2F1E7171C28B083001101F6 = {
 			isa = PBXGroup;
 			children = (
+				B2D6AE881C3444600042E2DD /* SharethroughSDK+DFP.framework */,
 				511284181C29B70C006F704A /* CoreMedia.framework */,
 				511284161C29B707006F704A /* AudioToolbox.framework */,
 				511284121C29B6FE006F704A /* AVFoundation.framework */,
@@ -107,7 +108,6 @@
 				511284061C29B6CE006F704A /* EventKit.framework */,
 				511284071C29B6CE006F704A /* EventKitUI.framework */,
 				511284041C29B64E006F704A /* GoogleMobileAds.framework */,
-				511284021C29B450006F704A /* SharethroughSDK+DFP.framework */,
 				B2F1E7461C28B2D0001101F6 /* MediaPlayer.framework */,
 				B2F1E7441C28B2C8001101F6 /* AdSupport.framework */,
 				B2F1E7421C28B2C0001101F6 /* CoreGraphics.framework */,

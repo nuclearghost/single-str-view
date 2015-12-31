@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--InitialViewController-->
@@ -77,22 +78,47 @@
                                     <action selector="logAdCounts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jyn-Q6-OEv"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqh-eZ-1M0">
+                                <rect key="frame" x="0.0" y="431" width="600" height="149"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here after assigning Ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd5-aK-8Yb">
+                                        <rect key="frame" x="192" y="65" width="217" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2156862745" green="0.72549019609999998" blue="0.49275287829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="HW6-dL-Faf"/>
+                                    <constraint firstItem="wd5-aK-8Yb" firstAttribute="centerX" secondItem="rqh-eZ-1M0" secondAttribute="centerX" id="Ire-X9-kIy"/>
+                                    <constraint firstItem="wd5-aK-8Yb" firstAttribute="centerY" secondItem="rqh-eZ-1M0" secondAttribute="centerY" id="eed-GX-tdi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YjA-hm-aEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1qi-oD-UBv"/>
                             <constraint firstItem="YjA-hm-aEr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3Ze-Cl-QSg"/>
+                            <constraint firstItem="rqh-eZ-1M0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5If-Mi-fEv"/>
                             <constraint firstItem="ag0-FK-IId" firstAttribute="top" secondItem="5JW-es-8ZZ" secondAttribute="bottom" constant="8" id="FHZ-l7-k0b"/>
+                            <constraint firstItem="rqh-eZ-1M0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P0f-Ik-rKM"/>
                             <constraint firstItem="ag0-FK-IId" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sx1-Ud-QNq"/>
                             <constraint firstItem="rVS-sr-U9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VnJ-Ot-X1d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rqh-eZ-1M0" secondAttribute="bottom" constant="20" id="akB-h4-k5n"/>
                             <constraint firstItem="5JW-es-8ZZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m2H-nI-hEf"/>
                             <constraint firstItem="5JW-es-8ZZ" firstAttribute="top" secondItem="YjA-hm-aEr" secondAttribute="bottom" constant="8" id="mEu-Aa-re5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rqh-eZ-1M0" secondAttribute="trailing" constant="-20" id="qVB-VQ-1yX"/>
                             <constraint firstItem="rVS-sr-U9E" firstAttribute="top" secondItem="ag0-FK-IId" secondAttribute="bottom" constant="8" id="zKR-da-N8F"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="rqh-eZ-1M0" id="Mjh-1z-fsW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="695" y="361"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pOg-u6-baE">

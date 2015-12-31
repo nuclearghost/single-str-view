@@ -14,6 +14,8 @@ static NSString *kPlacementKey = @"e7244b42";
 
 @interface ViewController () <STRAdViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIView *greenView;
+
 @end
 
 @implementation ViewController
@@ -75,6 +77,8 @@ static NSString *kPlacementKey = @"e7244b42";
     for (int i = 0; i < nAds; ++i) {
         [[SharethroughSDK sharedInstance] AdForPlacement:kPlacementKey atIndex:i];
     }
+    STRAdvertisement *ad = [[SharethroughSDK sharedInstance] AdForPlacement:kPlacementKey atIndex:0];
+    [ad registerViewForInteraction:self.greenView withViewController:self];
     NSInteger nUnassignedAds = [[SharethroughSDK sharedInstance] unassignedNumberOfAdsAvailableForPlacement:kPlacementKey];
     NSLog(@"Assigned %ld ads. %ld unassigned", (long)nAds, (long)nUnassignedAds);
 }
